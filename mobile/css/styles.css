@@ -95,7 +95,8 @@ textarea {overflow-x:hidden;overflow-y:auto;background:#fff;color:#666;border:1p
 
 /* html, body */
 html { width:100%; height:100%;}
-body {position:relative; height:100%;overflow:hidden;}
+body {position:relative; height:100%;}
+.mobile {width:100%;overflow:hidden;}
 body:after {display: block;visibility: hidden;height: 0;font-size: 0;clear: both;content: '';}
 
 /* map-container */
@@ -142,7 +143,7 @@ body:after {display: block;visibility: hidden;height: 0;font-size: 0;clear: both
 .message-delete {width:3.5938vw;height:4.6875vw;background:url(../images/icon-delete.png) no-repeat;background-size:3.5938vw auto;}
 .message-info .message-date {margin:0 0 0 3.1250vw;color:#666;font-size:2.8125vw;line-height:4.6875vw;font-weight:400;vertical-align: top;}
 .feed-box-fixed {position: fixed; bottom:0;left:0;width:100%;padding:1.5625vw;background: #fff;transition: 0.5s;}
-.sidebar-close .feed-box-fixed {left:-100vw;}
+.sidebar-close .feed-box-fixed {left:-100vw;bottom:-100vw;}
 
 
 /* map-search */
