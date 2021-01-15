@@ -153,7 +153,7 @@ body:after {display: block;visibility: hidden;height: 0;font-size: 0;clear: both
 
 /* map-grid */
 #map-grid{position:absolute; top:0; left:0; bottom:0; right:0; height:100%; cursor: -webkit-grab; cursor: grab;overflow:hidden;}
-.img-grid-sample {width:100%;height:100%;object-fit:cover;}
+.img-grid-sample {width:100%;height:100vh;object-fit:cover;}
 
 /* upload-file */
 label.upload-file {position:relative;display:block; margin:auto;}
