@@ -1,0 +1,9 @@
+
+pc
+https://moonjenny.github.io/map/pc/map.html
+https://moonjenny.github.io/map/pc/popup.html
+
+mobile
+https://moonjenny.github.io/map/mobile/map.html
+https://moonjenny.github.io/map/mobile/map-list.html
+https://moonjenny.github.io/map/mobile/popup.html
