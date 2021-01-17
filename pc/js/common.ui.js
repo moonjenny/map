@@ -14,10 +14,12 @@ $(document).ready(function(){
 	//nav-menu
 	var sidebarBtn = $(".btn-close-sidebar");
 	var sidebarBox = $(".map-sidebar");
+	var searchBox = $(".map-search");
 
 	sidebarBtn.click(function(){
 		$(this).toggleClass('sidebar-close');
 		sidebarBox.toggleClass('sidebar-close');
+		searchBox.toggleClass('search-close');
 	});
 
 	//location
