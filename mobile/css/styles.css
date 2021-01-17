@@ -163,8 +163,8 @@ label.upload-file input[type="file"] {width: 100%;height: 100%;position: absolut
 
 
 /* button */
-.btn-gray {padding:10px 20px;font-size:16px;font-weight:600;color:#fff;background:#7d7d7d;}
-.btn-black {padding:10px 20px;font-size:16px;font-weight:600;color:#fff;background:#000;}
+.btn-gray {padding:3.1250vw;line-height:3.1250vw;font-size:16px;font-weight:600;color:#fff;background:#7d7d7d;}
+.btn-black {padding:3.1250vw;line-height:3.1250vw;font-size:16px;font-weight:600;color:#fff;background:#000;}
 
 .btn-gray:hover, .btn-gray:focus, .btn-black:hover, .btn-black:focus {color:#fff;}
 
@@ -213,5 +213,11 @@ label.upload-file input[type="file"] {width: 100%;height: 100%;position: absolut
 .login-infomation span {font-size:2.8125vw;color:#666;}
 .login-infomation a {font-size:2.8125vw;color:#000;text-decoration: underline;}
 
+.login-sns {margin-top:4.6875vw;}
+.login-sns a {display:block;margin:1.5625vw 0;padding:1.5625vw;height:9.3750vw;line-height:6.2500vw;color:#fff;font-size:3.7500vw;font-weight:400;text-align:center; border-radius: 4px;}
+.login-sns .sns-facebook {background:#3b5999 url(../images/sns-facebook.png) 4.3750vw center no-repeat;background-size:6.2500vw auto;}
+.login-sns .sns-google {background:#4185f4 url(../images/sns-google.png) 4.3750vw center no-repeat;background-size:6.2500vw auto;}
+.login-sns .sns-twitter {background:#5caaf5 url(../images/sns-twitter.png) 4.3750vw center no-repeat;background-size:6.2500vw auto;}
+.login-sns .sns-kakao {background:#e7c733 url(../images/sns-kakao.png) 4.3750vw center no-repeat;background-size:6.2500vw auto;}
 
 

@@ -214,6 +214,12 @@ label.upload-file input[type="file"] {width: 100%;height: 100%;position: absolut
 .login-infomation {margin-top:15px;text-align:center;}
 .login-infomation span {font-size:16px;color:#666;}
 .login-infomation a {font-size:16px;color:#000;text-decoration: underline;}
+.login-sns {margin-top:30px;}
+.login-sns a {display:block;margin:4px 0;padding:10px;height:50px;line-height:30px;color:#fff;font-size:16px;font-weight:400;text-align:center; border-radius: 4px;}
+.login-sns .sns-facebook {background:#3b5999 url(../images/sns-facebook.png) 30px center no-repeat;background-size:38px auto;}
+.login-sns .sns-google {background:#4185f4 url(../images/sns-google.png) 30px center no-repeat;background-size:38px auto;}
+.login-sns .sns-twitter {background:#5caaf5 url(../images/sns-twitter.png) 30px center no-repeat;background-size:38px auto;}
+.login-sns .sns-kakao {background:#e7c733 url(../images/sns-kakao.png) 30px center no-repeat;background-size:38px auto;}
 
 /* reply-popup */
 .reply-popup {width:690px;z-index:9;}
