@@ -260,12 +260,13 @@ label.upload-file input[type="file"] {width: 100%;height: 100%;position: absolut
 
 @media screen and (max-width : 767px) {
   .btn-close-sidebar {width:10.9375vw;height:10.9375vw;left:auto;right:0;z-index: 99;background-size:1.5625vw auto;box-shadow: 3px 3px 3px rgba(0,0,0,0.25);}
-  .btn-close-sidebar.sidebar-close {height:9.3750vw;top:4.6875vw;right:-7.8125vw;background-size:1.5625vw auto;background-position:61% center;}
+  .btn-close-sidebar.sidebar-close {height:9.3750vw;top:4.6875vw;left:-2.8125vw;background-size:1.5625vw auto;background-position:61% center;}
   .map-sidebar.sidebar-close {margin-left:-100vw;}
   .map-search {top:4.6875vw;left:112vw;}
+  .map-search.search-close {left:12vw}
   .map-search-box {height:9.3750vw;box-shadow: 3px 3px 3px rgba(0,0,0,0.25);}
   .map-search .inp-map-search{height:9.3750vw;line-height:9.3750vw;font-size:2.8125vw;}
-  .map-search .btn-map-search {height:9.3750vw;padding:0;background-position:2.3333vw center;}
+  .map-search .btn-map-search {height:9.3750vw;padding:0;background-position:center center;}
 
   .map-sidebar {width:100%;}
 
