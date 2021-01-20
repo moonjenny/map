@@ -284,9 +284,9 @@ label.upload-file input[type="file"] {width: 100%;height: 100%;position: absolut
   .feed-box {padding:3.1250vw 0;}
   .message-info {top:4.6875vw;}
   .feed-box .profile-box {top:3.1250vw;width:9.3750vw;height:9.3750vw;}
-  .feed-box .message-box {padding-left:10.9375vw;}
-  .feed-box .message-box .name {line-height:7.8125vw;}
-  .feed-box .message-box textarea {line-height:4.6875vw;}
+  .feed-box .message-box .name {line-height:7.8125vw;padding-left:10.9375vw;height: 9.3750vw;}
+  .feed-box .message-box textarea {line-height:4.6875vw;padding-left:10.9375vw;}
+  .feed-box .message-box .filebox {padding-left:10.9375vw;}
   .feed-box .message-box .comment-box{margin-top:3.1250vw;}
   .feed-box .message-box .youtube iframe {height:45vw;}
   .feed-box .message-box .comment-box .name {line-height:3.9063vw;}
