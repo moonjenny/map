@@ -127,20 +127,20 @@ body:after {display: block;visibility: hidden;height: 0;font-size: 0;clear: both
 .feed-box {position:relative;padding:30px 0;border-bottom:1px solid #e5e5e5;}
 .feed-box .profile-box {position:absolute;top:30px;left:0;width:40px;height:40px;}
 .feed-box .profile-box img {width:100%;height:100%;border-radius:100%;}
-.feed-box .message-box {padding-left:54px;}
-.feed-box .message-box textarea {font-size:14px;line-height:30px;border:none;width:100%;max-height:50px;font-weight:200;}
+.feed-box .message-box textarea {padding-left:54px;font-size:14px;line-height:30px;border:none;width:100%;max-height:50px;font-weight:200;}
+.feed-box .message-box .filebox {padding-left:54px;}
 .btn-message-send {position:absolute;right:0;bottom:30px;width:70px;height:30px;color:#fff;font-size:12px;background:#000;font-weight:600;}
-.feed-box .message-box .name {display:block;font-size:14px;color:#222;line-height:36px;font-weight:600;}
+.feed-box .message-box .name {display:block;height:40px;padding-left:54px;font-size:14px;color:#222;line-height:36px;font-weight:600;}
 .feed-box .message-box .picture {display:block;padding:10px 0 0;}
 .feed-box .message-box .picture img{width:100%;border-radius: 8px;}
-.feed-box .message-box .youtube {display:block;}
+.feed-box .message-box .youtube {display:block;padding-top:10px;}
 .feed-box .message-box .youtube iframe {width:100%;}
-.feed-box .message-box .message {display:block;font-size:14px;color:#222;line-height:20px;font-weight:300;}
+.feed-box .message-box .message {display:block;padding-top:10px;font-size:14px;color:#222;line-height:20px;font-weight:300;}
 .feed-box .message-box .comment-box {position:relative;margin:30px 0 0;border-top:1px dotted #e5e5e5;}
 .feed-box .message-box .comment-box .name{display:table-cell;vertical-align: top;padding:8px 0;line-height:20px;}
 .feed-box .message-box .comment-box .message{display:table-cell;padding:8px 50px 8px 15px;vertical-align: top;}
 .feed-box .message-box .btn-comment-more {position:absolute;right:0;top:0;height:38px;padding:0;font-size:12px;color:#a1a1a1;}
-.message-info {position:absolute;top:36px;right:0;height:20px;}
+.message-info {position:absolute;top:40px;right:0;height:20px;}
 .message-info button {margin:0 4px;font-size:0;color:#fff;vertical-align: top;}
 .message-write {width:22px;height:20px;background:url(../images/ico-modify.png) no-repeat;background-size:auto 100%;}
 .message-delete {width:16px;height:20px;background:url(../images/icon-delete.png) no-repeat;background-size:100% auto;}
@@ -240,6 +240,7 @@ label.upload-file input[type="file"] {width: 100%;height: 100%;position: absolut
 .reply-content .feed-box {padding:20px 0;}
 .reply-content .feed-box .message-box {border-bottom:none;}
 .reply-content .feed-box .message-info{top:30px;}
+.reply-content .feed-box .profile-box {top:20px;}
 .reply-content .message-box {border-bottom:1px dotted #e6e6e6;}
 .comment-write {margin:0 30px 0 10px;border-top:1px solid #e6e6e6;}
 .reply-content .comment-write .feed-box{padding-bottom:0;border-bottom:none;}
@@ -256,7 +257,7 @@ label.upload-file input[type="file"] {width: 100%;height: 100%;position: absolut
   .btn-close-sidebar {left:450px;}
 
   .feed-box {padding:15px 0;}
-  .message-info {top:15px;}
+  .message-info {top:25px;}
   .feed-box .profile-box {top:15px;}
   .feed-box .message-box .comment-box{margin-top:15px;}
   .feed-box .message-box .youtube iframe {height:200px;}
