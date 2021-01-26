@@ -123,17 +123,17 @@ body:after {display: block;visibility: hidden;height: 0;font-size: 0;clear: both
 .map-login .user-name{padding:0 0 0 10px;}
 .map-login .user-name:before{content:'';position:absolute;left:0;top:50%;margin-top:-2px;width:4px;height:4px;border-radius: 2px;background:#f70000;}
 
-.map-feed-list{position:relative;padding:0 0 0 20px;height:calc(100% - 40px);overflow-y:auto;}
-.feed-box {position:relative;padding:30px 0;border-bottom:1px solid #e5e5e5;}
+.map-feed-list{position:relative;padding:0;height:calc(100% - 40px);overflow-y:auto;}
+.feed-box {position:relative;padding:30px 0;margin:0 15px;border-bottom:1px solid #e5e5e5;}
 .feed-box .profile-box {position:absolute;top:30px;left:0;width:40px;height:40px;}
 .feed-box .profile-box img {width:100%;height:100%;border-radius:100%;}
 .feed-box .message-box textarea {padding-left:54px;font-size:14px;line-height:30px;border:none;width:100%;max-height:50px;font-weight:200;}
 .feed-box .message-box .filebox {padding-left:54px;}
 .btn-message-send {position:absolute;right:0;bottom:30px;width:70px;height:30px;color:#fff;font-size:12px;background:#000;font-weight:600;}
 .feed-box .message-box .name {display:block;height:40px;padding-left:54px;font-size:14px;color:#222;line-height:36px;font-weight:600;}
-.feed-box .message-box .picture {display:block;padding:10px 0 0;}
-.feed-box .message-box .picture img{width:100%;border-radius: 8px;}
-.feed-box .message-box .youtube {display:block;padding-top:10px;}
+.feed-box .message-box .picture {display:block;padding:10px 0 0;margin:0 -15px;}
+.feed-box .message-box .picture img{width:100%;}
+.feed-box .message-box .youtube {display:block;padding-top:10px;margin:0 -15px;}
 .feed-box .message-box .youtube iframe {width:100%;}
 .feed-box .message-box .message {display:block;padding-top:10px;font-size:14px;color:#222;line-height:20px;font-weight:300;}
 .feed-box .message-box .comment-box {position:relative;margin:30px 0 0;border-top:1px dotted #e5e5e5;}
@@ -248,7 +248,7 @@ label.upload-file input[type="file"] {width: 100%;height: 100%;position: absolut
 .reply-popup .btn-message-send{bottom:0;}
 
 .mCS-dark-thick.mCSB_scrollTools .mCSB_draggerRail {background:rgba(0,0,0,0)}
-.map-feed-list .mCSB_container {margin-right:15px;}
+.map-feed-list .mCSB_container {margin-right:0;}
 .mCS-dark-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {width:0;}
 
 
@@ -283,7 +283,7 @@ label.upload-file input[type="file"] {width: 100%;height: 100%;position: absolut
   .map-login {text-align:left;height:10.9375vw;padding:0 0 0 1.5625vw;}
   .map-login span, .map-login a {padding:0 1.5625vw;line-height:10.9375vw;}
 
-  .map-feed-list {width:100%;padding-left:3.1250vw;height:calc(100% - 10.9375vw);}
+  .map-feed-list {width:100%;padding-left:0;height:calc(100% - 10.9375vw);}
   .feed-box {padding:3.1250vw 0;}
   .message-info {top:4.6875vw;}
   .feed-box .profile-box {top:3.1250vw;width:9.3750vw;height:9.3750vw;}
