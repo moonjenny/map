@@ -153,7 +153,7 @@ body:after {display: block;visibility: hidden;height: 0;font-size: 0;clear: both
 .sns-box ul li a{height:22px;line-height:22px;}
 .sns-box ul li a span{position:relative;padding-left:36px;margin-left:0;}
 .sns-box ul li a span:before {content:'';position:absolute;top:-6px;left:0;width:36px;height:36px;border-radius: 50%;transition: 0.5s;}
-.sns-box ul li a:hover span:before {background-color:rgba(200, 200, 200, 0.3);}
+.sns-box ul li:hover a span:before {background-color:rgba(200, 200, 200, 0.3);}
 .sns-box ul li span{display:inline-block;height:22px;line-height:22px;margin-left:6px;font-size:14px;color:#666;}
 .sns-box .sns-like {width:28%;}
 .sns-box .sns-comment {width:34%;}
@@ -161,7 +161,7 @@ body:after {display: block;visibility: hidden;height: 0;font-size: 0;clear: both
 .sns-box .sns-send {text-align:right;padding-right:5px;}
 .sns-box .icon-like {color:#163cff;}
 .sns-box .icon-like:before {background:#fff url(../images/icon-like.png) center 6px no-repeat;background-size:24px 22px;}
-.sns-box .sns-like a:hover .icon-like:before {background-color:rgb(22, 60, 255, 0.2);}
+.sns-box .sns-like:hover a .icon-like:before {background-color:rgb(22, 60, 255, 0.2);}
 .sns-box .icon-comment:before {background:url(../images/icon-comment.png) 6px 8px no-repeat;background-size:24px 22px;}
 .sns-box .icon-share:before {background:url(../images/icon-share.png) 5px 6px no-repeat;background-size:24px 22px;}
 .sns-box .icon-send:before {background:url(../images/icon-send.png) 3px 8px no-repeat;background-size:24px 22px;}
