@@ -122,6 +122,8 @@ body:after {display: block;visibility: hidden;height: 0;font-size: 0;clear: both
 .map-login a:focus,.map-login a:hover {color:#fff;text-decoration: none;}
 .map-login .user-name{padding:0 0 0 10px;}
 .map-login .user-name:before{content:'';position:absolute;left:0;top:50%;margin-top:-2px;width:4px;height:4px;border-radius: 2px;background:#f70000;}
+.map-login .logo {position:absolute;top:0;left:0;width:140px;height:40px;}
+.map-login .logo img {width:100%;height:100%;object-fit: cover;}
 
 .map-feed-list{position:relative;padding:0;height:calc(100% - 40px);overflow-y:auto;}
 .feed-box {position:relative;padding:30px 0;margin:0 15px;border-bottom:1px solid #e5e5e5;}
@@ -135,16 +137,29 @@ body:after {display: block;visibility: hidden;height: 0;font-size: 0;clear: both
 .feed-box .message-box .picture img{width:100%;}
 .feed-box .message-box .youtube {display:block;padding-top:10px;margin:0 -15px;}
 .feed-box .message-box .youtube iframe {width:100%;}
-.feed-box .message-box .message {display:block;padding-top:10px;font-size:14px;color:#222;line-height:20px;font-weight:300;}
-.feed-box .message-box .comment-box {position:relative;margin:30px 0 0;border-top:1px dotted #e5e5e5;}
+.feed-box .message-box .message {display:block;padding:10px 0 15px;font-size:14px;color:#222;line-height:20px;font-weight:300;border-bottom:1px solid #e5e5e5;}
+.feed-box .message-box .comment-box {position:relative;border-top:1px dotted #e5e5e5;}
 .feed-box .message-box .comment-box .name{display:table-cell;vertical-align: top;padding:8px 0;line-height:20px;}
-.feed-box .message-box .comment-box .message{display:table-cell;padding:8px 50px 8px 15px;vertical-align: top;}
+.feed-box .message-box .comment-box .message{display:table-cell;padding:8px 50px 8px 15px;vertical-align: top;border-bottom:none;}
 .feed-box .message-box .btn-comment-more {position:absolute;right:0;top:0;height:38px;padding:0;font-size:12px;color:#a1a1a1;}
 .message-info {position:absolute;top:40px;right:0;height:20px;}
 .message-info button {margin:0 4px;font-size:0;color:#fff;vertical-align: top;}
 .message-write {width:22px;height:20px;background:url(../images/ico-modify.png) no-repeat;background-size:auto 100%;}
 .message-delete {width:16px;height:20px;background:url(../images/icon-delete.png) no-repeat;background-size:100% auto;}
 .message-info .message-date {margin:0 0 0 12px;color:#666;font-size:12px;line-height:20px;font-weight:400;}
+.sns-box ul{display:table;width:100%;}
+.sns-box ul li{display:table-cell;vertical-align: middle;padding:18px 0;}
+.sns-box ul li a{display:inline-block;height:22px;line-height:22px;}
+.sns-box ul li a span{margin-left:5px;}
+.sns-box ul li span{display:inline-block;height:22px;line-height:22px;margin-left:6px;font-size:14px;color:#666;}
+.sns-box .sns-like {width:28%;}
+.sns-box .sns-comment {width:34%;}
+.sns-box .sns-share {text-align:center;}
+.sns-box .sns-send {text-align:right;padding-right:5px;}
+.sns-box .icon-like {padding-left:34px;color:#163cff;background:url(../images/icon-like.png) no-repeat;background-size:24px 22px;}
+.sns-box .icon-comment {padding-left:34px;background:url(../images/icon-comment.png) no-repeat;background-size:24px 22px;}
+.sns-box .icon-share {padding-left:34px;background:url(../images/icon-share.png) no-repeat;background-size:24px 22px;}
+.sns-box .icon-send {padding-left:34px;background:url(../images/icon-send.png) no-repeat;background-size:24px 22px;}
 
 /* map-search */
 .map-search{position:absolute;top:60px;left:690px;width:215px;transition: 0.5s;}
@@ -262,9 +277,10 @@ label.upload-file input[type="file"] {width: 100%;height: 100%;position: absolut
   .feed-box {padding:15px 0;}
   .message-info {top:25px;}
   .feed-box .profile-box {top:15px;}
-  .feed-box .message-box .comment-box{margin-top:15px;}
   .feed-box .message-box .youtube iframe {height:200px;}
   .btn-message-send {bottom:15px;}
+
+  .map-login .logo {width:100px;}
 
 }
 
@@ -280,8 +296,9 @@ label.upload-file input[type="file"] {width: 100%;height: 100%;position: absolut
 
   .map-sidebar {width:100%;}
 
-  .map-login {text-align:left;height:10.9375vw;padding:0 0 0 1.5625vw;}
+  .map-login {text-align:left;height:10.9375vw;padding:0;}
   .map-login span, .map-login a {padding:0 1.5625vw;line-height:10.9375vw;}
+  .map-login .logo {position:relative;display:inline-block;width:20vw;height:10.9375vw;vertical-align:top;}
 
   .map-feed-list {width:100%;padding-left:0;height:calc(100% - 10.9375vw);}
   .feed-box {padding:3.1250vw 0;}
