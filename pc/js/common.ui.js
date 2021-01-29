@@ -15,11 +15,13 @@ $(document).ready(function(){
 	var sidebarBtn = $(".btn-close-sidebar");
 	var sidebarBox = $(".map-sidebar");
 	var searchBox = $(".map-search");
+	var footerBox = $(".map-footer"); /* 20210129 추가 */
 
 	sidebarBtn.click(function(){
 		$(this).toggleClass('sidebar-close');
 		sidebarBox.toggleClass('sidebar-close');
 		searchBox.toggleClass('search-close');
+		footerBox.toggleClass('footer-close'); /* 20210129 추가 */
 	});
 
 	//location

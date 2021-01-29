@@ -172,6 +172,15 @@ body:after {display: block;visibility: hidden;height: 0;font-size: 0;clear: both
 #map-grid{position:absolute; top:0; left:0; bottom:0; right:0; height:100%; cursor: -webkit-grab; cursor: grab;background:url(../images/map-bg.png) repeat;}
 .img-grid-sample {width:100%;height:100%;object-fit:cover;}
 
+.map-footer {position:absolute;bottom:0;right:0;padding-left:645px;width:100%;height:30px;background:#e6e6e6;transition:0.5s;}
+.map-footer.footer-close {padding-left:0;}
+.footer-copy {display:inline-block;padding-left:30px;line-height:30px;font-size:12px;color:#222;}
+.footer-list {position:absolute;right:12px;top:0;height:30px;overflow:hidden;}
+.footer-list li {position:relative;float:left;padding:0 18px}
+.footer-list li:first-child:after {display:none;}
+.footer-list li:after {content:'';position:absolute;top:50%;left:0;width:3px;height:3px;background:#666;}
+.footer-list li a {display:inline-block;font-size:12px;color:#666;line-height: 30px;}
+
 /* upload-file */
 label.upload-file {position:relative;display:block; margin:auto;}
 label.upload-file .btn {display: inline-block;width:24px;height:19px;color: #fff;font-size:0;cursor: pointer;vertical-align: top;background:url(../images/ico-file.png) no-repeat;background-size:100% auto;}
@@ -281,6 +290,7 @@ label.upload-file input[type="file"] {width: 100%;height: 100%;position: absolut
   .btn-message-send {bottom:15px;}
 
   .map-login .logo {width:100px;}
+  .map-footer {padding-left:450px;}
 
 }
 
@@ -350,9 +360,5 @@ label.upload-file input[type="file"] {width: 100%;height: 100%;position: absolut
 
   .reply-content .feed-box .message-info{top:4.6875vw;}
 
-
-
-
-
-
+  .map-footer {padding-left:0;}
 }

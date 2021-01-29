@@ -114,7 +114,7 @@ body:after {display: block;visibility: hidden;height: 0;font-size: 0;clear: both
 .map-login .logo {display:inline-block;width:20vw;height:10.9375vw;vertical-align:top;}
 .map-login .logo img {width:100%;height:100%;object-fit: cover;}
 
-.map-feed-list{position:relative;padding:0 1.5625vw 1.5625vw;height:calc(100% - 10.9375vw);overflow-y:auto;z-index:1;background:#fff;}
+.map-feed-list{position:relative;padding:0 3.1250vw 3.1250vw;height:calc(100% - 10.9375vw);overflow-y:auto;z-index:1;background:#fff;}
 .feed-box {position:relative;padding:3.1250vw 0 0;border-bottom:1px solid #e5e5e5;}
 .feed-box .profile-box {position:absolute;top:3.1250vw;left:0;width:9.3750vw;height:9.3750vw;}
 .feed-box .profile-box img {width:100%;height:100%;border-radius:100%;}
@@ -142,8 +142,8 @@ body:after {display: block;visibility: hidden;height: 0;font-size: 0;clear: both
 .message-write {width:4.6875vw;height:4.6875vw;background:url(../images/ico-modify.png) no-repeat;background-size:4.6875vw auto;}
 .message-delete {width:3.5938vw;height:4.6875vw;background:url(../images/icon-delete.png) no-repeat;background-size:3.5938vw auto;}
 .message-info .message-date {margin:0 0 0 3.1250vw;color:#666;font-size:2.8125vw;line-height:4.6875vw;font-weight:400;vertical-align: top;}
-.feed-box-fixed {position: absolute; bottom:0;left:0;right:0;padding:1.5625vw;background: #fff;z-index:1;}
-/* .sidebar-close .feed-box-fixed {left:-100vw;} */
+.feed-box-fixed {position: absolute; bottom:0;left:0;right:0;padding:0 3.1250vw 25px;background: #fff;z-index:1;}
+.feed-box-fixed .feed-box {padding-bottom:3.1250vw}
 .sns-box ul{display:flex;justify-content: space-between;align-items: center;}
 .sns-box ul li{padding:3.7500vw 0 3.1250vw;}
 .sns-box ul li a{display:inline-block;line-height:5.0000vw;}
@@ -165,6 +165,15 @@ body:after {display: block;visibility: hidden;height: 0;font-size: 0;clear: both
 /* map-grid */
 #map-grid{position:absolute; top:0; left:0; bottom:0; right:0; height:100%; cursor: -webkit-grab; cursor: grab;overflow:hidden;background:url(../images/map-bg.png) repeat;}
 .img-grid-sample {width:100%;height:100vh;object-fit:cover;}
+
+.map-footer {position:absolute;bottom:0;right:0;width:100%;height:25px;background:#e6e6e6;z-index:9;}
+.footer-copy {display:inline-block;padding-left:3.1250vw;line-height:25px;font-size:2.8125vw;color:#222;}
+.footer-list {position:absolute;right:1.5625vw;top:0;height:25px;overflow:hidden;}
+.footer-list li {position:relative;float:left;padding:0 1.5625vw;}
+.footer-list li:first-child:after {display:none;}
+.footer-list li:after {content:'';position:absolute;top:50%;left:0;width:2px;height:2px;background:#666;}
+.footer-list li a {display:inline-block;font-size:2.8125vw;color:#666;line-height: 25px;}
+
 
 /* upload-file */
 label.upload-file {position:relative;display:block; margin:auto;}
