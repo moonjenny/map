@@ -3,12 +3,14 @@ $(document).ready(function(){
 
 	//sidevar scrollbar
 	$(".map-feed-list").mCustomScrollbar({
-		theme:"dark-thick"
+		theme:"dark-thick",
+		mouseWheelPixels: 1000
 	});
 
 	//popup-reply scrollbar
 	$(".reply-content").mCustomScrollbar({
-		theme:"dark-thick"
+		theme:"dark-thick",
+		mouseWheelPixels: 1000
 	});
 
 	//nav-menu
@@ -16,12 +18,14 @@ $(document).ready(function(){
 	var sidebarBox = $(".map-sidebar");
 	var searchBox = $(".map-search");
 	var footerBox = $(".map-footer"); /* 20210129 추가 */
+	var gridMap = $("#map-grid"); /* 20210303 추가 */
 
 	sidebarBtn.click(function(){
 		$(this).toggleClass('sidebar-close');
 		sidebarBox.toggleClass('sidebar-close');
 		searchBox.toggleClass('search-close');
 		footerBox.toggleClass('footer-close'); /* 20210129 추가 */
+		gridMap.toggleClass('grid-close'); /* 20210303 추가 */
 	});
 
 	//location
