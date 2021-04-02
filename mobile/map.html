@@ -67,6 +67,73 @@
         <a href="" data-toggle="modal" data-target="#popupJoin">JOIN</a>
       </section> -->
       <section class="map-feed-list">
+        
+        <!-- 동영상 -->
+        <!-- feed-box -->
+        <div class="feed-box">
+          <div class="profile-box"><img src="./images/profile-img.jpg" alt=""></div>
+          <!-- message-box -->
+          <div class="message-box">
+            <span class="name">Donald J. Trump</span>
+            <div class="feed-video">
+              <div class="video-poster" id="feedPoster">
+                <img src="./images/poster.jpg" alt="">
+                <button class='btn-play' onclick="playVideo()">Play</button>
+              </div>
+              <video id="feedVideo" controls>
+                <source src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" type="video/mp4">
+              </video>
+            </div>
+            <script>
+              var feedVideo = document.getElementById("feedVideo"); 
+              function playVideo() {
+                $("#feedPoster").hide();
+                feedVideo.play(); 
+              }
+            </script>
+            <!-- 20210129 sns-box -->
+            <div class="sns-box">
+              <ul>
+                <li class="sns-like">
+                  <a href="">
+                    <span class="icon-like">Like</span>
+                  </a>
+                  <span>24K</span>
+                </li>
+                <li class="sns-comment">
+                  <a href="">
+                    <span class="icon-comment">Comment</span>
+                  </a>
+                  <span>124</span>
+                </li>
+                <li class="sns-share">
+                  <a href="">
+                    <span class="icon-share">Share</span>
+                  </a>
+                </li>
+                <li class="sns-send">
+                  <a href="">
+                    <span class="icon-send">Send</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- //20210129 sns-box -->
+            <div class="comment-box">
+              <span class="name">Shibasss</span>
+              <span class="message">Our president is no longer  it is ...</span>
+              <button type="button" class="btn-comment-more" data-toggle="modal" data-target="#popupReply">more+</button>
+            </div>
+          </div>
+          <!-- //message-box -->
+          <div class="message-info">
+            <button type="button" type="button"  class="message-write">message write</button>
+            <button type="button" class="message-delete">message delete</button>
+            <span class="message-date">01.07</span>
+          </div>
+        </div>
+        <!-- //feed-box -->
+        <!-- //동영상 -->
         <!-- feed-box -->
         <div class="feed-box">
           <div class="profile-box"><img src="./images/profile-img.jpg" alt=""></div>
