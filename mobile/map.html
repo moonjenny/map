@@ -50,7 +50,7 @@
       </div>
     </div>
     <!-- //map-search -->
-    
+
     <!-- map-sidebar -->
     <div class="map-sidebar">
       <!-- login -->
@@ -58,8 +58,9 @@
         <div class="logo"><img src="./images/profile-img.jpg" alt=""></div> <!-- 20210129 로고 추가 -->
         <a href=""><span class="user-name">Donald J. Trump</span></a>
         <a href="">LOGOUT</a>
-        <a href="" data-toggle="modal" data-target="#popupLogin">LOGIN</a>
-        <a href="" data-toggle="modal" data-target="#popupJoin">JOIN</a>
+        <!-- <a href="" data-toggle="modal" data-target="#popupLogin">LOGIN</a>
+        <a href="" data-toggle="modal" data-target="#popupJoin">JOIN</a> -->
+        <div class="map-view"><img src="./images/map-view.png" alt=""></div>
       </section>
       <!-- logout
       <section class="map-login">
@@ -67,7 +68,62 @@
         <a href="" data-toggle="modal" data-target="#popupJoin">JOIN</a>
       </section> -->
       <section class="map-feed-list">
-        
+
+        <!-- 이미지 재생 20210414 -->
+        <!-- feed-box -->
+        <div class="feed-box">
+          <div class="profile-box"><img src="./images/profile-img.jpg" alt=""></div>
+          <!-- message-box -->
+          <div class="message-box">
+            <span class="name">Donald J. Trump</span>
+            <div class="picture">
+              <img src="./images/sample-picture.jpg" alt="">
+            </div>
+            <!-- 20210129 sns-box -->
+            <div class="sns-box">
+              <ul>
+                <li class="sns-like">
+                  <a href="">
+                    <span class="icon-like">Like</span>
+                  </a>
+                  <span>24K</span>
+                </li>
+                <li class="sns-comment">
+                  <a href="">
+                    <span class="icon-comment">Comment</span>
+                    <span>124</span>
+                  </a>
+                </li>
+                <li class="sns-share">
+                  <a href="">
+                    <span class="icon-share">Share</span>
+                  </a>
+                </li>
+                <li class="sns-send">
+                  <a href="">
+                    <span class="icon-send">Send</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- //20210129 sns-box -->
+            <!-- comment-box -->
+            <div class="comment-box">
+              <span class="name">Shibasss 길어요 길어요 길어요</span>
+              <span class="message">Our president is no longer  it is Our president is no longer  it is Our president is no longer  it is ...</span>
+              <button type="button" class="btn-comment-more">more+</button>
+            </div>
+            <!-- //comment-box -->
+          </div>
+          <!-- //message-box -->
+          <div class="message-info">
+            <button type="button" class="message-write">message write</button>
+            <button type="button" class="message-delete">message delete</button>
+            <span class="message-date">01.07</span>
+          </div>
+        </div>
+        <!-- //feed-box -->
+
         <!-- 동영상 -->
         <!-- feed-box -->
         <div class="feed-box">
@@ -85,10 +141,10 @@
               </video>
             </div>
             <script>
-              var feedVideo = document.getElementById("feedVideo"); 
+              var feedVideo = document.getElementById("feedVideo");
               function playVideo() {
                 $("#feedPoster").hide();
-                feedVideo.play(); 
+                feedVideo.play();
               }
             </script>
             <!-- 20210129 sns-box -->
@@ -356,7 +412,7 @@
             <button type="button" class="btn-message-send"><span>SEND</span></button>
           </div>
         </div>
-        <!-- logout -->
+        <!-- logout
         <div class="feed-box write logout">
           <div class="profile-box">
             <img src="./images/profile-noimg.png" alt="no profile">
@@ -366,7 +422,7 @@
             <div class="filebox">
               <label for="uploadFile2" class="upload-file">
                 <div class="btn">파일찾기<input id="uploadFile2" type="file"></div>
-                <p></p><!-- 업로드파일명 -->
+                <p></p><!-- 업로드파일명
               </label>
             </div>
             <button type="button" class="btn-message-send"><span>SEND</span></button>
