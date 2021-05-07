@@ -325,6 +325,7 @@ label.upload-file input[type="file"] {width: 100%;height: 100%;position: absolut
   .map-login {text-align:left;height:10.9375vw;padding:0;}
   .map-login span, .map-login a {padding:0 1.5625vw;line-height:10.9375vw;}
   .map-login .logo {position:relative;display:inline-block;width:20vw;height:10.9375vw;vertical-align:top;}
+  .map-view {position: absolute;right: 10.9375vw;width: 23vw;height: 10.9375vw;}
 
   .map-feed-list {width:100%;padding-left:0;height:calc(100% - 10.9375vw);}
   .feed-box {padding:3.1250vw 0;}
