@@ -31,13 +31,14 @@ window.onload = function(){
 		}));
 		resizeContents();
 	});
-		
-	function resizeContents() {
-		var feedWrite = $(".feed-box-fixed").outerHeight(); // 20210414 수정
-		$(".map-feed-list").css({
-			paddingTop : feedWrite + 'px' // 20210414 수정
-		});
-	}
+	
+	//20210512 삭제
+	// function resizeContents() {
+	// 	var feedWrite = $(".feed-box-fixed").outerHeight(); // 20210414 수정
+	// 	$(".map-feed-list").css({
+	// 		paddingTop : feedWrite + 'px' // 20210414 수정
+	// 	});
+	// }
 	// map-feed-list 주어진 시간만큼 지나야 주어진 함수를 실행 합니다.
 	function throttle(ms, fn) {
 		var allow = true;
