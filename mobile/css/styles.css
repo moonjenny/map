@@ -153,7 +153,7 @@ body:after {display: block;visibility: hidden;height: 0;font-size: 0;clear: both
 .message-write {width:4.6875vw;height:4.6875vw;background:url(../images/ico-modify.png) no-repeat;background-size:4.6875vw auto;}
 .message-delete {width:3.5938vw;height:4.6875vw;background:url(../images/icon-delete.png) no-repeat;background-size:3.5938vw auto;}
 .message-info .message-date {margin:0 0 0 3.1250vw;color:#666;font-size:2.8125vw;line-height:4.6875vw;font-weight:400;vertical-align: top;}
-.feed-box-fixed {position: absolute; top:10.9375vw;left:0;right:0; padding:0 3.1250vw 0;background: #fff;z-index:2;} /* 20210414 수정 */
+.feed-box-fixed {position: relative; top:10.9375vw;padding:0 3.1250vw 0;background: #fff;z-index:2;} /* 20210414 수정 */
 .feed-box-fixed .feed-box {padding-bottom:3.1250vw}
 .feed-box-fixed .feed-box .profile-box {left:0;}
 .message-box .sns-box {padding: 0 3.1250vw;}
