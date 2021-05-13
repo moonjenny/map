@@ -20,6 +20,27 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="./js/jquery.mCustomScrollbar.concat.min.js"></script>
   <script type="text/javascript" src="./js/common.ui.js"></script>
+
+  <!-- 20210513 화면 상단 200px 이상일때 id값 불러오기  -->
+  <script type="text/javascript">
+  $(function(){
+      var feedItem = $('#feed-list-data .feed-box');
+      var topNav = $('.map-login').outerHeight();
+
+      feedItem.eq(0).addClass("on");
+
+      $('.map-feed-list').scroll(function() {
+      	for(i=0; i < feedItem.length; i++){
+      		if($('#feed-list-data .feed-box:eq('+i+')').offset().top - topNav <= 200 ){
+            feedItem.removeClass("on");
+            $('#feed-list-data .feed-box:eq('+i+')').addClass("on");
+      		}
+      	}
+        //콘솔 id
+        console.log($('.feed-box.on').attr("id"));
+    });
+  });
+  </script>
 </head>
 <body>
 
@@ -69,6 +90,7 @@
       </section> -->
       <section class="map-feed-list">
 
+
         <!-- 20210512 글쓰기 이동 -->
         <!-- feed-box-fixed -->
         <section class="feed-box-fixed">
@@ -83,7 +105,7 @@
               <div class="filebox">
                 <label for="uploadFile1" class="upload-file">
                   <div class="btn">파일찾기<input id="uploadFile1" type="file"></div>
-                  <p></p><!-- 업로드파일명 -->
+                  <p></p><!-- 업로드파일명 --></p>
                 </label>
               </div>
               <button type="button" class="btn-message-send"><span>SEND</span></button>
@@ -109,329 +131,330 @@
         </section>
         <!-- //feed-box-fixed -->
 
+        <div id="feed-list-data">
         <!-- 이미지 재생 20210414 -->
-        <!-- feed-box -->
-        <div class="feed-box">
-          <div class="profile-box"><img src="./images/profile-img.jpg" alt=""></div>
-          <!-- message-box -->
-          <div class="message-box">
-            <span class="name">Donald J. Trump</span>
-            <div class="picture">
-              <img src="./images/sample-picture.jpg" alt="">
-            </div>
-            <!-- 20210129 sns-box -->
-            <div class="sns-box">
-              <ul>
-                <li class="sns-like">
-                  <a href="">
-                    <span class="icon-like">Like</span>
-                  </a>
-                  <span>24K</span>
-                </li>
-                <li class="sns-comment">
-                  <a href="">
-                    <span class="icon-comment">Comment</span>
-                    <span>124</span>
-                  </a>
-                </li>
-                <li class="sns-share">
-                  <a href="">
-                    <span class="icon-share">Share</span>
-                  </a>
-                </li>
-                <li class="sns-send">
-                  <a href="">
-                    <span class="icon-send">Send</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <!-- //20210129 sns-box -->
-            <!-- comment-box -->
-            <div class="comment-box">
-              <span class="name">Shibasss 길어요 길어요 길어요</span>
-              <span class="message">Our president is no longer  it is Our president is no longer  it is Our president is no longer  it is ...</span>
-              <button type="button" class="btn-comment-more">more+</button>
-            </div>
-            <!-- //comment-box -->
-          </div>
-          <!-- //message-box -->
-          <div class="message-info">
-            <button type="button" class="message-write">message write</button>
-            <button type="button" class="message-delete">message delete</button>
-            <span class="message-date">01.07</span>
-          </div>
-        </div>
-        <!-- //feed-box -->
-
-        <!-- 동영상 -->
-        <!-- feed-box -->
-        <div class="feed-box">
-          <div class="profile-box"><img src="./images/profile-img.jpg" alt=""></div>
-          <!-- message-box -->
-          <div class="message-box">
-            <span class="name">Donald J. Trump</span>
-            <div class="feed-video">
-              <div class="video-poster" id="feedPoster">
-                <img src="./images/poster.jpg" alt="">
-                <button class='btn-play' onclick="playVideo()">Play</button>
+          <!-- feed-box -->
+          <div class="feed-box" id="contents_001">
+            <div class="profile-box"><img src="./images/profile-img.jpg" alt=""></div>
+            <!-- message-box -->
+            <div class="message-box">
+              <span class="name">Donald J. Trump</span>
+              <div class="picture">
+                <img src="./images/sample-picture.jpg" alt="">
               </div>
-              <video id="feedVideo" controls>
-                <source src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" type="video/mp4">
-              </video>
+              <!-- 20210129 sns-box -->
+              <div class="sns-box">
+                <ul>
+                  <li class="sns-like">
+                    <a href="">
+                      <span class="icon-like">Like</span>
+                    </a>
+                    <span>24K</span>
+                  </li>
+                  <li class="sns-comment">
+                    <a href="">
+                      <span class="icon-comment">Comment</span>
+                      <span>124</span>
+                    </a>
+                  </li>
+                  <li class="sns-share">
+                    <a href="">
+                      <span class="icon-share">Share</span>
+                    </a>
+                  </li>
+                  <li class="sns-send">
+                    <a href="">
+                      <span class="icon-send">Send</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- //20210129 sns-box -->
+              <!-- comment-box -->
+              <div class="comment-box">
+                <span class="name">Shibasss 길어요 길어요 길어요</span>
+                <span class="message">Our president is no longer  it is Our president is no longer  it is Our president is no longer  it is ...</span>
+                <button type="button" class="btn-comment-more">more+</button>
+              </div>
+              <!-- //comment-box -->
             </div>
-            <script>
-              var feedVideo = document.getElementById("feedVideo");
-              function playVideo() {
-                $("#feedPoster").hide();
-                feedVideo.play();
-              }
-            </script>
-            <!-- 20210129 sns-box -->
-            <div class="sns-box">
-              <ul>
-                <li class="sns-like">
-                  <a href="">
-                    <span class="icon-like">Like</span>
-                  </a>
-                  <span>24K</span>
-                </li>
-                <li class="sns-comment">
-                  <a href="">
-                    <span class="icon-comment">Comment</span>
-                  </a>
-                  <span>124</span>
-                </li>
-                <li class="sns-share">
-                  <a href="">
-                    <span class="icon-share">Share</span>
-                  </a>
-                </li>
-                <li class="sns-send">
-                  <a href="">
-                    <span class="icon-send">Send</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <!-- //20210129 sns-box -->
-            <div class="comment-box">
-              <span class="name">Shibasss</span>
-              <span class="message">Our president is no longer  it is ...</span>
-              <button type="button" class="btn-comment-more" data-toggle="modal" data-target="#popupReply">more+</button>
+            <!-- //message-box -->
+            <div class="message-info">
+              <button type="button" class="message-write">message write</button>
+              <button type="button" class="message-delete">message delete</button>
+              <span class="message-date">01.07</span>
             </div>
           </div>
-          <!-- //message-box -->
-          <div class="message-info">
-            <button type="button" type="button"  class="message-write">message write</button>
-            <button type="button" class="message-delete">message delete</button>
-            <span class="message-date">01.07</span>
-          </div>
-        </div>
-        <!-- //feed-box -->
-        <!-- //동영상 -->
-        <!-- feed-box -->
-        <div class="feed-box">
-          <div class="profile-box"><img src="./images/profile-img.jpg" alt=""></div>
-          <!-- message-box -->
-          <div class="message-box">
-            <span class="name">Donald J. Trump</span>
-            <span class="message">I am asking for everyone at the U.S. Capitol to remain peaceful. No violence!<br>Remember, WE are the Party of Law & Order – respect the Law and our great men and women in Blue. Thank you!</span>
-            <!-- 20210129 sns-box -->
-            <div class="sns-box">
-              <ul>
-                <li class="sns-like">
-                  <a href="">
-                    <span class="icon-like">Like</span>
-                  </a>
-                  <span>24K</span>
-                </li>
-                <li class="sns-comment">
-                  <a href="">
-                    <span class="icon-comment">Comment</span>
+          <!-- //feed-box -->
+          <!-- 동영상 -->
+          <!-- feed-box -->
+          <div class="feed-box" id="contents_002">
+            <div class="profile-box"><img src="./images/profile-img.jpg" alt=""></div>
+            <!-- message-box -->
+            <div class="message-box">
+              <span class="name">Donald J. Trump</span>
+              <div class="feed-video">
+                <div class="video-poster" id="feedPoster">
+                  <img src="./images/poster.jpg" alt="">
+                  <button class='btn-play' onclick="playVideo()">Play</button>
+                </div>
+                <video id="feedVideo" controls>
+                  <source src="https://withinmile.fastedge.net/new_16200182471768.mp4" type="video/mp4">
+                </video>
+              </div>
+              <script>
+                var feedVideo = document.getElementById("feedVideo");
+                function playVideo() {
+                  $("#feedPoster").hide();
+                  feedVideo.play();
+                }
+              </script>
+              <!-- 20210129 sns-box -->
+              <div class="sns-box">
+                <ul>
+                  <li class="sns-like">
+                    <a href="">
+                      <span class="icon-like">Like</span>
+                    </a>
+                    <span>24K</span>
+                  </li>
+                  <li class="sns-comment">
+                    <a href="">
+                      <span class="icon-comment">Comment</span>
+                    </a>
                     <span>124</span>
-                  </a>
-                </li>
-                <li class="sns-share">
-                  <a href="">
-                    <span class="icon-share">Share</span>
-                  </a>
-                </li>
-                <li class="sns-send">
-                  <a href="">
-                    <span class="icon-send">Send</span>
-                  </a>
-                </li>
-              </ul>
+                  </li>
+                  <li class="sns-share">
+                    <a href="">
+                      <span class="icon-share">Share</span>
+                    </a>
+                  </li>
+                  <li class="sns-send">
+                    <a href="">
+                      <span class="icon-send">Send</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- //20210129 sns-box -->
+              <div class="comment-box">
+                <span class="name">Shibasss</span>
+                <span class="message">Our president is no longer  it is ...</span>
+                <button type="button" class="btn-comment-more" data-toggle="modal" data-target="#popupReply">more+</button>
+              </div>
             </div>
-            <!-- //20210129 sns-box -->
-            <!-- comment-box -->
-            <div class="comment-box">
-              <span class="name">Shibasss 길어요 길어요 길어요</span>
-              <span class="message">Our president is no longer  it is Our president is no longer  it is Our president is no longer  it is ...</span>
-              <button type="button" class="btn-comment-more">more+</button>
+            <!-- //message-box -->
+            <div class="message-info">
+              <button type="button" type="button"  class="message-write">message write</button>
+              <button type="button" class="message-delete">message delete</button>
+              <span class="message-date">01.07</span>
             </div>
-            <!-- //comment-box -->
           </div>
-          <!-- //message-box -->
-          <div class="message-info">
-            <button type="button" class="message-write">message write</button>
-            <button type="button" class="message-delete">message delete</button>
-            <span class="message-date">01.07</span>
+          <!-- //feed-box -->
+          <!-- //동영상 -->
+          <!-- feed-box -->
+          <div class="feed-box" id="contents_003">
+            <div class="profile-box"><img src="./images/profile-img.jpg" alt=""></div>
+            <!-- message-box -->
+            <div class="message-box">
+              <span class="name">Donald J. Trump</span>
+              <span class="message">I am asking for everyone at the U.S. Capitol to remain peaceful. No violence!<br>Remember, WE are the Party of Law & Order – respect the Law and our great men and women in Blue. Thank you!</span>
+              <!-- 20210129 sns-box -->
+              <div class="sns-box">
+                <ul>
+                  <li class="sns-like">
+                    <a href="">
+                      <span class="icon-like">Like</span>
+                    </a>
+                    <span>24K</span>
+                  </li>
+                  <li class="sns-comment">
+                    <a href="">
+                      <span class="icon-comment">Comment</span>
+                      <span>124</span>
+                    </a>
+                  </li>
+                  <li class="sns-share">
+                    <a href="">
+                      <span class="icon-share">Share</span>
+                    </a>
+                  </li>
+                  <li class="sns-send">
+                    <a href="">
+                      <span class="icon-send">Send</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- //20210129 sns-box -->
+              <!-- comment-box -->
+              <div class="comment-box">
+                <span class="name">Shibasss 길어요 길어요 길어요</span>
+                <span class="message">Our president is no longer  it is Our president is no longer  it is Our president is no longer  it is ...</span>
+                <button type="button" class="btn-comment-more">more+</button>
+              </div>
+              <!-- //comment-box -->
+            </div>
+            <!-- //message-box -->
+            <div class="message-info">
+              <button type="button" class="message-write">message write</button>
+              <button type="button" class="message-delete">message delete</button>
+              <span class="message-date">01.07</span>
+            </div>
           </div>
+          <!-- //feed-box -->
+          <!-- feed-box -->
+          <div class="feed-box" id="contents_004">
+            <div class="profile-box"><img src="./images/profile-img.jpg" alt=""></div>
+            <!-- message-box -->
+            <div class="message-box">
+              <span class="name">Donald J. Trump</span>
+              <div class="picture"><img src="./images/sample-picture.jpg" alt=""></div>
+              <!-- 20210129 sns-box -->
+              <div class="sns-box">
+                <ul>
+                  <li class="sns-like">
+                    <a href="">
+                      <span class="icon-like">Like</span>
+                    </a>
+                    <span>24K</span>
+                  </li>
+                  <li class="sns-comment">
+                    <a href="">
+                      <span class="icon-comment">Comment</span>
+                      <span>124</span>
+                    </a>
+                  </li>
+                  <li class="sns-share">
+                    <a href="">
+                      <span class="icon-share">Share</span>
+                    </a>
+                  </li>
+                  <li class="sns-send">
+                    <a href="">
+                      <span class="icon-send">Send</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- //20210129 sns-box -->
+              <div class="comment-box">
+                <span class="name">Shibasss</span>
+                <span class="message">Our president is no longer  it is ...</span>
+                <button type="button" class="btn-comment-more">more+</button>
+              </div>
+            </div>
+            <!-- //message-box -->
+            <div class="message-info">
+              <button type="button" type="button"  class="message-write">message write</button>
+              <button type="button" class="message-delete">message delete</button>
+              <span class="message-date">01.07</span>
+            </div>
+          </div>
+          <!-- //feed-box -->
+          <!-- feed-box -->
+          <div class="feed-box" id="contents_005">
+            <div class="profile-box"><img src="./images/profile-img.jpg" alt=""></div>
+            <!-- message-box -->
+            <div class="message-box">
+              <span class="name">Donald J. Trump</span>
+              <div class="youtube">
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/IL9XA3qhEY0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <!-- 20210129 sns-box -->
+              <div class="sns-box">
+                <ul>
+                  <li class="sns-like">
+                    <a href="">
+                      <span class="icon-like">Like</span>
+                    </a>
+                    <span>24K</span>
+                  </li>
+                  <li class="sns-comment">
+                    <a href="">
+                      <span class="icon-comment">Comment</span>
+                      <span>124</span>
+                    </a>
+                  </li>
+                  <li class="sns-share">
+                    <a href="">
+                      <span class="icon-share">Share</span>
+                    </a>
+                  </li>
+                  <li class="sns-send">
+                    <a href="">
+                      <span class="icon-send">Send</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- //20210129 sns-box -->
+              <div class="comment-box">
+                <span class="name">Shibasss</span>
+                <span class="message">Our president is no longer  it is ...</span>
+                <button type="button" class="btn-comment-more">more+</button>
+              </div>
+            </div>
+            <!-- //message-box -->
+            <div class="message-info">
+              <button type="button" type="button"  class="message-write">message write</button>
+              <button type="button" class="message-delete">message delete</button>
+              <span class="message-date">01.07</span>
+            </div>
+          </div>
+          <!-- //feed-box -->
+          <!-- feed-box -->
+          <div class="feed-box" id="contents_006">
+            <div class="profile-box"><img src="./images/profile-img.jpg" alt=""></div>
+            <!-- message-box -->
+            <div class="message-box">
+              <span class="name">Donald J. Trump</span>
+              <span class="message">I am asking for everyone at the U.S. Capitol to remain peaceful. No violence!<br>Remember, WE are the Party of Law & Order – respect the Law and our great men and women in Blue. Thank you!</span>
+              <!-- 20210129 sns-box -->
+              <div class="sns-box">
+                <ul>
+                  <li class="sns-like">
+                    <a href="">
+                      <span class="icon-like">Like</span>
+                    </a>
+                    <span>24K</span>
+                  </li>
+                  <li class="sns-comment">
+                    <a href="">
+                      <span class="icon-comment">Comment</span>
+                      <span>124</span>
+                    </a>
+                  </li>
+                  <li class="sns-share">
+                    <a href="">
+                      <span class="icon-share">Share</span>
+                    </a>
+                  </li>
+                  <li class="sns-send">
+                    <a href="">
+                      <span class="icon-send">Send</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- //20210129 sns-box -->
+              <!-- comment-box -->
+              <div class="comment-box">
+                <span class="name">Shibasss</span>
+                <span class="message">Our president is no longer  it is ...</span>
+                <button type="button" class="btn-comment-more">more+</button>
+              </div>
+              <!-- //comment-box -->
+            </div>
+            <!-- //message-box -->
+            <div class="message-info">
+              <button type="button" class="message-write">message write</button>
+              <button type="button" class="message-delete">message delete</button>
+              <span class="message-date">01.07</span>
+            </div>
+          </div>
+          <!-- //feed-box -->
         </div>
-        <!-- //feed-box -->
-        <!-- feed-box -->
-        <div class="feed-box">
-          <div class="profile-box"><img src="./images/profile-img.jpg" alt=""></div>
-          <!-- message-box -->
-          <div class="message-box">
-            <span class="name">Donald J. Trump</span>
-            <div class="picture"><img src="./images/sample-picture.jpg" alt=""></div>
-            <!-- 20210129 sns-box -->
-            <div class="sns-box">
-              <ul>
-                <li class="sns-like">
-                  <a href="">
-                    <span class="icon-like">Like</span>
-                  </a>
-                  <span>24K</span>
-                </li>
-                <li class="sns-comment">
-                  <a href="">
-                    <span class="icon-comment">Comment</span>
-                    <span>124</span>
-                  </a>
-                </li>
-                <li class="sns-share">
-                  <a href="">
-                    <span class="icon-share">Share</span>
-                  </a>
-                </li>
-                <li class="sns-send">
-                  <a href="">
-                    <span class="icon-send">Send</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <!-- //20210129 sns-box -->
-            <div class="comment-box">
-              <span class="name">Shibasss</span>
-              <span class="message">Our president is no longer  it is ...</span>
-              <button type="button" class="btn-comment-more">more+</button>
-            </div>
-          </div>
-          <!-- //message-box -->
-          <div class="message-info">
-            <button type="button" type="button"  class="message-write">message write</button>
-            <button type="button" class="message-delete">message delete</button>
-            <span class="message-date">01.07</span>
-          </div>
-        </div>
-        <!-- //feed-box -->
-        <!-- feed-box -->
-        <div class="feed-box">
-          <div class="profile-box"><img src="./images/profile-img.jpg" alt=""></div>
-          <!-- message-box -->
-          <div class="message-box">
-            <span class="name">Donald J. Trump</span>
-            <div class="youtube">
-              <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/IL9XA3qhEY0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <!-- 20210129 sns-box -->
-            <div class="sns-box">
-              <ul>
-                <li class="sns-like">
-                  <a href="">
-                    <span class="icon-like">Like</span>
-                  </a>
-                  <span>24K</span>
-                </li>
-                <li class="sns-comment">
-                  <a href="">
-                    <span class="icon-comment">Comment</span>
-                    <span>124</span>
-                  </a>
-                </li>
-                <li class="sns-share">
-                  <a href="">
-                    <span class="icon-share">Share</span>
-                  </a>
-                </li>
-                <li class="sns-send">
-                  <a href="">
-                    <span class="icon-send">Send</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <!-- //20210129 sns-box -->
-            <div class="comment-box">
-              <span class="name">Shibasss</span>
-              <span class="message">Our president is no longer  it is ...</span>
-              <button type="button" class="btn-comment-more">more+</button>
-            </div>
-          </div>
-          <!-- //message-box -->
-          <div class="message-info">
-            <button type="button" type="button"  class="message-write">message write</button>
-            <button type="button" class="message-delete">message delete</button>
-            <span class="message-date">01.07</span>
-          </div>
-        </div>
-        <!-- //feed-box -->
-        <!-- feed-box -->
-        <div class="feed-box">
-          <div class="profile-box"><img src="./images/profile-img.jpg" alt=""></div>
-          <!-- message-box -->
-          <div class="message-box">
-            <span class="name">Donald J. Trump</span>
-            <span class="message">I am asking for everyone at the U.S. Capitol to remain peaceful. No violence!<br>Remember, WE are the Party of Law & Order – respect the Law and our great men and women in Blue. Thank you!</span>
-            <!-- 20210129 sns-box -->
-            <div class="sns-box">
-              <ul>
-                <li class="sns-like">
-                  <a href="">
-                    <span class="icon-like">Like</span>
-                  </a>
-                  <span>24K</span>
-                </li>
-                <li class="sns-comment">
-                  <a href="">
-                    <span class="icon-comment">Comment</span>
-                    <span>124</span>
-                  </a>
-                </li>
-                <li class="sns-share">
-                  <a href="">
-                    <span class="icon-share">Share</span>
-                  </a>
-                </li>
-                <li class="sns-send">
-                  <a href="">
-                    <span class="icon-send">Send</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <!-- //20210129 sns-box -->
-            <!-- comment-box -->
-            <div class="comment-box">
-              <span class="name">Shibasss</span>
-              <span class="message">Our president is no longer  it is ...</span>
-              <button type="button" class="btn-comment-more">more+</button>
-            </div>
-            <!-- //comment-box -->
-          </div>
-          <!-- //message-box -->
-          <div class="message-info">
-            <button type="button" class="message-write">message write</button>
-            <button type="button" class="message-delete">message delete</button>
-            <span class="message-date">01.07</span>
-          </div>
-        </div>
-        <!-- //feed-box -->
       </section>
       <button type="button" class="btn-close-sidebar"><span>사이드바 닫기</span></button>
     </div>
