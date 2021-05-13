@@ -25,13 +25,13 @@ window.onload = function(){
 	});
 
 	//map-feed-list
-	$(document).ready(function(){
-		$(window).resize(throttle(100, function(e) {
-			resizeContents();
-		}));
-		resizeContents();
-	});
-	
+	// $(document).ready(function(){
+	// 	$(window).resize(throttle(100, function(e) {
+	// 		resizeContents();
+	// 	}));
+	// 	resizeContents();
+	// });
+
 	//20210512 삭제
 	// function resizeContents() {
 	// 	var feedWrite = $(".feed-box-fixed").outerHeight(); // 20210414 수정
