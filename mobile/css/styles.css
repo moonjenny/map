@@ -259,5 +259,5 @@ label.upload-file input[type="file"] {width: 100%;height: 100%;position: absolut
 .map-feed-list .mCS-dark-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {width:4px;}
 .map-feed-list .mCS-dark-thick.mCSB_scrollTools .mCSB_draggerRail {display:none;}
 
-/* button */
+/* 20210604 button */
 .message-info .button-text {font-size:3.1250vw;color:#222;padding:0 10px;height:4.6875vw;border:1px solid #999;box-sizing:border-box;}
