@@ -8,10 +8,10 @@ $(document).ready(function(){
 	});
 
 	//popup-reply scrollbar
-	$(".reply-content").mCustomScrollbar({
-		theme:"dark-thick",
-		mouseWheelPixels: 1000
-	});
+	//$(".reply-content").mCustomScrollbar({
+	//	theme:"dark-thick",
+	//	mouseWheelPixels: 1000
+	//});
 
 	//nav-menu
 	var sidebarBtn = $(".btn-close-sidebar");
