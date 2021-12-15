@@ -314,8 +314,8 @@ label.upload-file input[type="file"] {width: 100%;height: 100%;position: absolut
 .reply-popup-more .reply-comment-box::-webkit-scrollbar {display: none;}
 
 /* 이미지 */
-.reply-popup-more .picture {padding-bottom: 100%;position: relative;}
-.reply-popup-more .picture img {position: absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100%;height: 100%;object-fit: cover;}
+.reply-popup-more .picture {position: relative;}
+.reply-popup-more .picture img {width: 100%;height: 100%;object-fit: cover;}
 
 .mCS-dark-thick.mCSB_scrollTools .mCSB_draggerRail {background:rgba(0,0,0,0)}
 .map-feed-list .mCSB_container {margin-right:0;}
