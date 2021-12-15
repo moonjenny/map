@@ -8,3 +8,16 @@ https://moonjenny.github.io/map/mobile/map.html
 https://moonjenny.github.io/map/mobile/map-list.html
 https://moonjenny.github.io/map/mobile/popup.html
 
+
+<b>업데이트 - 20211215</b>
+-댓글 더보기 팝업 수정
+
+/map/pc/popup.html
+/map/pc/css/styles.css
+주석 20211215
+
+/map/mobile/popup.html
+/map/mobile/css/styles.css
+주석 20211215
+
+
