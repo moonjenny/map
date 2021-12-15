@@ -9,7 +9,7 @@ https://moonjenny.github.io/map/mobile/map-list.html
 https://moonjenny.github.io/map/mobile/popup.html
 
 
-<b>업데이트 - 20211215</b>
+업데이트 - 20211215
 -댓글 더보기 팝업 수정
 
 /map/pc/popup.html
