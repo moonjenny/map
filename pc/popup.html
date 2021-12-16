@@ -73,6 +73,8 @@
           <button class="btn btn-black" type="button" data-toggle="modal" data-target="#popupJoin">회원가입 팝업</button><br><br>
           <button class="btn btn-black" type="button" data-toggle="modal" data-target="#popupList">게시물 리스트 팝업</button><br><br>
           <button class="btn btn-black" type="button" data-toggle="modal" data-target="#popupReply">댓글 더보기 팝업</button><br><br>
+          <button class="btn btn-black" type="button" data-toggle="modal" data-target="#popupVideo">영상 팝업</button> 
+          <button class="btn btn-black" type="button" data-toggle="modal" data-target="#popupImg">이미지 팝업</button><br><br>
         </div>
 
       </section>
@@ -204,7 +206,7 @@
           <!-- 20211215 수정 -->
           <!-- modal-body -->
           <div class="modal-body">
-            <div class="reply-image-box" style="height:100%;overflow-y:scroll;position:relative;">
+            <div class="reply-image-box">
               <!-- 동영상-세로 -->
               <div class="mov">
                 <video id="player0" class="" controls=""><source type="video/mp4" src="https://withinmile.fastedge.net/new_16334431678635.mov"></video>
@@ -325,6 +327,71 @@
       </div>
     </div>
     <!-- //REPLY -->
+
+    <!-- 20211216 팝업 추가-->
+    <!-- VIDEO -->
+    <div class="modal fade" id="popupVideo" role="dialog">
+      <div class="modal-popup video-popup">
+        
+        <!-- modal-content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">model close</button>
+            <h4 class="modal-title hide">영상 자세히 보기</h4>
+          </div>
+          <!-- modal-body -->
+          <div class="modal-body" style="overflow-y:scroll"> <!-- style 테스트 중 : 개발시 삭제해주세요 -->
+            <div class="video-popup-box">
+              <!-- 영상 세로 -->
+              <video controls="false" preload="none" playsinline="" id="player0" poster="https://withinmile.fastedge.net/poster/16365053557728.jpg" class="">
+                <source type="video/mp4" src="https://withinmile.fastedge.net/new_16365053557728.mp4">
+              </video>
+            </div>
+            <div class="video-popup-box">
+              <!-- 영상 가로 -->
+              <video  controls="false" preload="none" playsinline="" id="player8" poster="https://withinmile.fastedge.net/poster/16304788328189.jpg" class="">
+                <source type="video/mp4" src="https://withinmile.fastedge.net/new_16304788328189.mov">
+              </video>
+            </div>
+          </div>
+          <!-- //modal-body -->
+        </div>
+        <!-- //modal-content-->
+
+      </div>
+    </div>
+    <!-- //VIDEO -->
+
+    <!-- IMAGE -->
+    <div class="modal fade" id="popupImg" role="dialog">
+      <div class="modal-popup video-popup">
+        
+        <!-- modal-content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">model close</button>
+            <h4 class="modal-title hide">영상 자세히 보기</h4>
+          </div>
+          <!-- modal-body -->
+          <div class="modal-body" style="overflow-y:scroll"> <!-- style 테스트 중 : 개발시 삭제해주세요 -->
+            <!-- 이미지 세로 -->
+            <div class="video-popup-box">
+              <img src="https://www.bulletinmap.com/data/temp/16332334603243_thumb.jpeg" alt="">
+            </div>
+            <!-- 이미지 가로 -->
+            <div class="video-popup-box">
+              <img src="https://www.paris.co.kr/wp-content/uploads/2019/11/2.jpg" alt="">
+            </div>
+          </div>
+          <!-- //modal-body -->
+        </div>
+        <!-- //modal-content-->
+
+      </div>
+    </div>
+    <!-- //IMAGE -->
+    <!-- //20211216 팝업 추가-->
+
     <!-- LIST -->
     <div class="modal fade" id="popupList" role="dialog">
       <div class="modal-popup reply-popup">
