@@ -307,7 +307,7 @@ label.upload-file input[type="file"] {width: 100%;height: 100%;position: absolut
 .reply-popup-more .modal-header {position: absolute;top: 0;right: 0;width: 40px;height: 40px;background:#fff;z-index: 1;}
 .reply-popup-more .modal-header .close {top:10px;right:10px;}
 .reply-popup-more .modal-body {height:100%;display:flex;flex-wrap:wrap;justify-content:space-between;}
-.reply-popup-more .reply-image-box {width:60%;height:100%;padding:0;display:table;background:#000;}
+.reply-popup-more .reply-image-box {width:60%;height:100%;padding:0;background:#000;}
 .reply-popup-more .reply-content .image-box img {width:100%;height:100%;background-size:cover;}
 .reply-popup-more .reply-comment-box {flex:1;margin-left:20px;overflow-x:hidden;overflow-y:auto;max-height:100%;}
 .reply-popup-more .reply-comment-box .comment-write {position:relative;margin:0;padding-bottom:140px;padding-right:10px;}
@@ -323,9 +323,9 @@ label.upload-file input[type="file"] {width: 100%;height: 100%;position: absolut
 .video-popup-box img {width:100%;height:100%;object-fit:contain;}
 
 /* 이미지 */
-.reply-popup-more .picture {position: relative;display:table-cell;width:100%;height:100%;}
+.reply-popup-more .picture {position: relative;display:table;width:100%;height:100%;}
 .reply-popup-more .picture span {display:table-cell;vertical-align: middle;}
-.reply-popup-more .picture img {width: 100%;height: 100%;object-fit: cover;}
+.reply-popup-more .picture img {object-fit: cover;}
 
 .reply-popup-more .reply-image-box,
 .reply-popup-more .reply-comment-box {-ms-overflow-style: none;scrollbar-width: none;}
