@@ -349,3 +349,16 @@ label.upload-file input[type="file"] {width: 100%;height: 100%;position: absolut
 .reply-popup-more .reply-image-box::-webkit-scrollbar,
 .reply-popup-more .reply-comment-box::-webkit-scrollbar {display: none;}
 
+/* 20220112 추가 */
+.gallery-popup {width:100%;}
+.pop-gallery {padding: 3vw 2vw;}
+.pop-gallery-list {margin-bottom:2vw;}
+.pop-gallery-list .gallery-info {padding:0 0 10px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items: center;}
+.pop-gallery-list .gallery-date {font-size:2vw;}
+.pop-gallery-list .gallery-area {color:#999;font-size:1.6vw;}
+.pop-gallery-list ul {display:flex;flex-wrap:wrap;align-items:center;}
+.pop-gallery-list ul li {width:33.33%;padding:0.5vw;}
+.pop-gallery-list .gallery-img {position:relative;display:block;padding-bottom:100%;}
+.pop-gallery-list ul li img {width:100%;height:100%;
+position: absolute;top: 0;left: 0;bottom: 0;right: 0;object-fit: cover;}
+.pop-gallery-list .gallery-date {font-size:2vw;}
